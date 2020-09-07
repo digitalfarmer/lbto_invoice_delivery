@@ -32,17 +32,21 @@
 
                     </group>
                     <notebook>
-                        <page string="Ekspedisi Detail">
+                        <page string="Expedition Detail">
                             <field name="expedition_lines">
                                 <tree editable="buttom">
-                                    <field name="name"/>
-                                    <field name="sequence_number_next"/>
+                                    <field name="name" />
+<!--                                    <field name="sequence_number_next"/>-->
+                                    <field name="invoice_number"/>
                                     <field name="state_invoice"/>
                                     <field name="notes"/>
                                     <field name="receive_date"/>
                                     <field name="expedition_id" invisible="1"/>
                                 </tree>
                             </field>
+                        </page>
+                        <page string="Commission">
+
                         </page>
                     </notebook>
                 </sheet>
@@ -56,7 +60,7 @@
         <field name="model">invoice.delivery</field>
         <field name="arch" type="xml">
             <tree string="Expedition">
-                <field name="name" widget="handle"/>
+                <field name="name"/>
                 <field name="delivery_date"/>
                 <field name="personal_code"/>
                 <field name="vehicle_number"/>

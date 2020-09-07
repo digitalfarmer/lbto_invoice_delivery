@@ -27,7 +27,8 @@ class InvoiceDeliveryDetail(models.Model):
     _description = 'InvoiceDeliveryDetail'
 
     name = fields.Many2one('invoice.delivery', 'Ekspedisi')
-    sequence_number_next= fields.Many2one('account.invoice','No Faktur')
+    # sequence_number_next= fields.Many2one('account.invoice','No Faktur')
+    invoice_number = fields.Char('No Faktur')
     notes= fields.Text()
     state_invoice = fields.Selection([
         ('back', 'Kembali'),
